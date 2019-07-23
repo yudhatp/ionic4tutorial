@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    The world is your oyster.
+    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <ion-segment color="primary" [(ngModel)]="yudsegment">
+      <ion-segment-button value="today">
+          Today
+      </ion-segment-button>
+      <ion-segment-button value="month">
+          Month
+      </ion-segment-button>
+      <ion-segment-button value="year">
+        Year
+      </ion-segment-button>
+    </ion-segment>
+    <div [ngSwitch]="yudsegment">
+      <ion-list *ngSwitchCase="'today'">
+        <ion-item>Today</ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="'month'">
+        <ion-item>This Month</ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="'year'">
+        <ion-item>This year</ion-item>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>
