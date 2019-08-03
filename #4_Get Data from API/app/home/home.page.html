@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let data of datauser">
+      <ion-thumbnail slot="start">
+        <img src="{{data.picture.thumbnail}}">
+      </ion-thumbnail>
+        <ion-label>
+          <h3 ion-text color="primary">{{data.name.title}},{{data.name.first}} {{data.name.last}}</h3>
+          <p>email : {{data.email}}</p>
+          <p>address : {{data.location.street}} {{data.location.city}}</p>
+        </ion-label>
+        
+    </ion-item>
+  </ion-list>
+</ion-content>
